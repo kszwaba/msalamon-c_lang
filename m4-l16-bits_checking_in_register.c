@@ -12,7 +12,7 @@ int main(){
     printf("\n\n");
     
     // ONE bit checking in register
-    printf("One bits checking in register\n");
+    printf("One bits checking if set in register\n");
     if(RegisterToCheck & (1 << 3)){
         printf("Bit on position 3 is set\n");
     }
@@ -22,7 +22,7 @@ int main(){
     printf("\n");
 
     // OR operator is used to check if either of the bits is set.
-    printf("Multiple bits checking in register by OR operator\n");
+    printf("Multiple bits checking if set in register by OR operator\n");
     if(RegisterToCheck & ((1 << 3) | (1 << 5))){
         printf("Bit on position 3 OR 5 is set\n");
     }
@@ -32,7 +32,7 @@ int main(){
     printf("\n");
 
     // AND operator is used to check if both bits are set.
-    printf("Multiple bits checking in register by AND operator\n");
+    printf("Multiple bits checking if set in register by AND operator\n");
     if((RegisterToCheck & ((1 << 3)) && (RegisterToCheck & (1 << 5)))){ // && instead of & operator is required to check if both bits are set
         printf("Bit on position 3 AND 5 is set\n");
     }
@@ -41,7 +41,17 @@ int main(){
     }
     printf("\n");
 
+    // AND operator is used to check if any of the bits are cleared.
+    printf("Multiple bits checking if cleared in register by AND operator\n");
+    if(!(RegisterToCheck & (1 << 3)) && (RegisterToCheck & (1 << 5))){ // && instead of & operator is required to check if any of the bits are cleared
+        printf("Any of the bits on position 3 or 5 is cleared\n");
+    }
+    else{
+        printf("None on only one of the bits on position 3 or 5 is cleared\n");
+    }
+    printf("\n");
 
+    
 
     return 0;
 }
