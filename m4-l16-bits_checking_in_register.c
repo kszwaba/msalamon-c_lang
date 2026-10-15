@@ -59,6 +59,9 @@ int main(){
     else{
         printf("Both bits on position 3 and 5 are not cleared\n");
     }
+
+    
+
     return 0;
 }
 
