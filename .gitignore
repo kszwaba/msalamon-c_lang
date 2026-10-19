@@ -1,5 +1,5 @@
 # Local VS Code workspace
-/c-szybki_start.code-workspace
+/*.code-workspace
 
 # Compiled binary
 /program.bin
